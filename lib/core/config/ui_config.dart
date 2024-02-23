@@ -12,7 +12,7 @@ class UiConfig {
   static const double mediaRatio = 3 / 4;
 
   // colors
-  static const Color primaryColor = Color(0xff57bf9c);
+  static const Color primaryColor = Color(0xff31C48D);
   static const Color secondaryColor = Color(0xffe3eeea);
   static const Color backgroundColor = Color(0xffFAFAFA);
   static const Color textColor1 = Color.fromARGB(255, 0, 0, 0);

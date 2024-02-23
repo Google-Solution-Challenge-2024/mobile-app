@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:solution_app/core/config/custom_theme_extension.dart';
 import 'package:solution_app/core/service-locator/service_locator_manager.dart';
 import 'package:solution_app/core/ui/button/custom_button.dart';
@@ -12,16 +13,21 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final CustomThemeExtension theme = CustomThemeExtension.of(context);
     return Scaffold(
-      backgroundColor: theme.backgroundColor,
+      backgroundColor: theme.primaryColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Expanded(child: Container()),
+          Image.asset(
+            "assets/icons/logo.png",
+            width: 300.w,
+            height: 300.w,
+          ),
+          SizedBox(height: 50.h),
           buildSigninBtn(
             context,
-            "assets/icons/google.png",
-            "Signin with Google",
+            "assets/icons/apple.png",
+            "Signin with Apple",
             () {
               globalSL<AuthBloc>().add(LoginAuthEvent());
             },
@@ -29,8 +35,8 @@ class LoginPage extends StatelessWidget {
           SizedBox(height: 20.h),
           buildSigninBtn(
             context,
-            "assets/icons/apple.png",
-            "Signin with Apple",
+            "assets/icons/google.png",
+            "Signin with Google",
             () {
               globalSL<AuthBloc>().add(LoginAuthEvent());
             },

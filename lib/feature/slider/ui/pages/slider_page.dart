@@ -26,19 +26,25 @@ class _SliderPageState extends State<SliderPage> {
             context,
             "Professional",
             "Tests",
-            "assets/icons/baby.png",
+            "assets/icons/baby_sleep.png",
           ),
           buildItem(
             context,
             "Educational",
             "Resources",
-            "assets/icons/baby.png",
+            "assets/icons/mom_idea.png",
           ),
           buildItem(
             context,
             "Supportive",
             "Community",
-            "assets/icons/baby.png",
+            "assets/icons/files.png",
+          ),
+          buildItem(
+            context,
+            "Supportive",
+            "Community",
+            "assets/icons/playing.png",
           ),
         ],
         done: Done(
@@ -75,7 +81,7 @@ class _SliderPageState extends State<SliderPage> {
           ),
         ),
         dotIndicator: DotIndicator(
-          selectedColor: theme.primaryYellow,
+          selectedColor: const Color(0xffEC407A),
           unselectedColor: theme.primaryBlue,
         ),
       ),
@@ -116,7 +122,7 @@ class _SliderPageState extends State<SliderPage> {
             SizedBox(height: 80.sp),
             Image.asset(
               image,
-              width: 150.w,
+              width: 250.w,
             ),
           ],
         ),

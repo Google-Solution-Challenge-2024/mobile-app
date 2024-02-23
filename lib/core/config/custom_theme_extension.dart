@@ -33,7 +33,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
   static const Color primaryBackground = Color(0xffe0dfdd);
 
   factory CustomThemeExtension.light() => CustomThemeExtension(
-        primaryColor: const Color(0xff57BF9C),
+        primaryColor: const Color(0xff31C48D),
         secondaryColor: const Color(0xffe3eeea),
         backgroundColor: const Color(0xffFAFAFA),
         textColor1: const Color(0xff000000),
