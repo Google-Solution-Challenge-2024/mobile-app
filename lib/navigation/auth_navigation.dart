@@ -2,12 +2,14 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:solution_app/core/service-locator/service_locator.dart';
-import 'package:solution_app/core/service-locator/service_locator_manager.dart';
 import 'package:solution_app/feature/slider/ui/pages/slider_page.dart';
 import 'package:solution_app/feature/test/model/test_model.dart';
 import 'package:solution_app/feature/test/ui/eye_detection_page.dart';
+import 'package:solution_app/feature/test/ui/game_result_page.dart';
 import 'package:solution_app/feature/test/ui/hand_test_page.dart';
 import 'package:solution_app/feature/test/ui/instruction_test_page.dart';
+import 'package:solution_app/feature/test/ui/matching_colors.dart';
+import 'package:solution_app/feature/test/ui/questionnaire_test_page.dart';
 import 'package:solution_app/navigation/bottom_navigation.dart';
 
 class AuthNavigation implements ServiceLocator {
@@ -20,6 +22,7 @@ class AuthNavigation implements ServiceLocator {
   static const String behavioralTest = '/behavioralTest';
   static const String physicalTest = '/physicalTest';
   static const String matchingColorsTest = '/matchingColorsTest';
+  static const String gameResult = '/gameResult';
 
   final RouteObserver<ModalRoute> routeObserver;
 
@@ -62,7 +65,7 @@ class AuthNavigation implements ServiceLocator {
         GoRoute(
           path: chatTest,
           builder: (BuildContext context, GoRouterState state) {
-            return const HandTestPage();
+            return const QuestionnaireTestPage();
           },
         ),
         GoRoute(
@@ -86,7 +89,14 @@ class AuthNavigation implements ServiceLocator {
         GoRoute(
           path: matchingColorsTest,
           builder: (BuildContext context, GoRouterState state) {
-            return const HandTestPage();
+            return const MatchingColorsPage();
+          },
+        ),
+        GoRoute(
+          path: gameResult,
+          builder: (BuildContext context, GoRouterState state) {
+            final bool arg = state.extra as bool;
+            return GameResultPage(isWin: arg);
           },
         ),
       ],

@@ -24,7 +24,7 @@ List<TestModel> generalTestsList = [
   ),
   TestModel(
       path: AuthNavigation.chatTest,
-      instruction: "Finish the questionnaire",
+      instruction: "Chat with AI model trained for supporting parents",
       title: "M-CHAT-R autism",
       icon: "assets/icons/chat.svg"),
   TestModel(
@@ -34,19 +34,19 @@ List<TestModel> generalTestsList = [
       icon: "assets/icons/eye.svg"),
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Behavioral",
     icon: "assets/icons/list.svg",
   ),
   TestModel(
-    path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    path: AuthNavigation.physicalTest,
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Physical behavior",
     icon: "assets/icons/phys.svg",
   ),
   TestModel(
-    path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    path: AuthNavigation.matchingColorsTest,
+    instruction: "Drop colors to matching squares.",
     title: "Matching colors",
     icon: "assets/icons/game.svg",
   ),
@@ -55,37 +55,37 @@ List<TestModel> generalTestsList = [
 List<TestModel> specialTestList = [
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Medicines",
     icon: "assets/icons/medicine.svg",
   ),
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Exercises",
     icon: "assets/icons/exercises.svg",
   ),
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Hospitals",
     icon: "assets/icons/hospitals.svg",
   ),
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Articles",
     icon: "assets/icons/articles.svg",
   ),
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Videos",
     icon: "assets/icons/videos.svg",
   ),
   TestModel(
     path: AuthNavigation.behavioralTest,
-    instruction: "Finish the questionnaire",
+    instruction: "Chat with AI model trained for supporting parents",
     title: "Food",
     icon: "assets/icons/food.svg",
   ),

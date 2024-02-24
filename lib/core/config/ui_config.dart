@@ -17,6 +17,6 @@ class UiConfig {
   static const Color backgroundColor = Color(0xffFAFAFA);
   static const Color textColor1 = Color.fromARGB(255, 0, 0, 0);
   static const Color textColor2 = Color.fromARGB(255, 29, 29, 29);
-  static const Color primaryYellow = Color(0x00fbe09d);
-  static const Color primaryBlue = Color(0x009ec6fa);
+  static const Color primaryYellow = Color(0xfffbe09d);
+  static const Color primaryBlue = Color(0xff9ec6fa);
 }

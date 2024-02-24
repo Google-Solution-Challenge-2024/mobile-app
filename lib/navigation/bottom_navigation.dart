@@ -10,7 +10,6 @@ import 'package:solution_app/feature/search/ui/page/search_page.dart';
 import 'package:solution_app/feature/slider/bloc/bloc/slider_bloc.dart';
 import 'package:solution_app/feature/slider/ui/pages/slider_page.dart';
 import 'package:solution_app/feature/stats/ui/page/stats_page.dart';
-import 'package:solution_app/navigation/auth_navigation.dart';
 
 enum BottomBar { home, stats, search, profile }
 

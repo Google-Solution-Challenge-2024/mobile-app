@@ -24,6 +24,9 @@ dependencies:
   video_player: ^2.8.2
   flutter_map: ^6.1.0
   cupertino_icons: ^1.0.2
+  image_picker: ^1.0.7
+  flutter_gemini: ^2.0.3
+  confetti: ^0.7.0
 
 dev_dependencies:
   flutter_test:
