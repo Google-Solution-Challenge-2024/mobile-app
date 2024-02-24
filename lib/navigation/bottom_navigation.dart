@@ -97,7 +97,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             "assets/icons/stats.svg",
-            width: 22.w,
+            width: 30.w,
             color: _currentBar == BottomBar.stats ? theme.primaryColor : null,
           ),
           label: "Rating",

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:solution_app/core/config/custom_theme_extension.dart';
 import 'package:solution_app/core/service-locator/service_locator_manager.dart';
 import 'package:solution_app/core/ui/button/custom_button.dart';
-import 'package:solution_app/feature/test/model/test.dart';
+import 'package:solution_app/feature/test/model/test_model.dart';
 import 'package:solution_app/navigation/auth_navigation.dart';
 
 class IntructionTestPage extends StatefulWidget {

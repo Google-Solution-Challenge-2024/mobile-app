@@ -4,7 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:solution_app/core/service-locator/service_locator.dart';
 import 'package:solution_app/core/service-locator/service_locator_manager.dart';
 import 'package:solution_app/feature/slider/ui/pages/slider_page.dart';
-import 'package:solution_app/feature/test/model/test.dart';
+import 'package:solution_app/feature/test/model/test_model.dart';
 import 'package:solution_app/feature/test/ui/eye_detection_page.dart';
 import 'package:solution_app/feature/test/ui/hand_test_page.dart';
 import 'package:solution_app/feature/test/ui/instruction_test_page.dart';

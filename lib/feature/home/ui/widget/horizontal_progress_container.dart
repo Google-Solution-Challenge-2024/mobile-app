@@ -3,7 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:solution_app/core/config/custom_theme_extension.dart';
 
 class HorizontalProgressContainer extends StatelessWidget {
-  const HorizontalProgressContainer({super.key});
+  final int max;
+  final int current;
+  const HorizontalProgressContainer({
+    super.key,
+    required this.max,
+    required this.current,
+  }) : assert(current <= max);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +31,7 @@ class HorizontalProgressContainer extends StatelessWidget {
             style: theme.headline3,
           ),
           Text(
-            "1 of 6 tests completed",
+            "$current of $max tests completed",
             style: theme.headline3.copyWith(
               color: theme.textColor1.withOpacity(0.5),
               fontWeight: FontWeight.w400,
@@ -36,12 +42,12 @@ class HorizontalProgressContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _buildProgressItem(theme.primaryColor),
-              _buildProgressItem(theme.primaryColor),
-              _buildProgressItem(theme.primaryColor),
-              _buildProgressItem(theme.textColor2.withOpacity(0.3)),
-              _buildProgressItem(theme.textColor2.withOpacity(0.3)),
-              _buildProgressItem(theme.textColor2.withOpacity(0.3)),
+              for (int i = 0; i < max; i++)
+                _buildProgressItem(
+                    context,
+                    i < current
+                        ? theme.primaryColor
+                        : theme.textColor2.withOpacity(0.3)),
             ],
           ),
         ],
@@ -49,10 +55,11 @@ class HorizontalProgressContainer extends StatelessWidget {
     );
   }
 
-  Widget _buildProgressItem(Color color) {
+  Widget _buildProgressItem(BuildContext context, Color color) {
     return Container(
-      width: 50.w,
+      width: MediaQuery.of(context).size.width / (max + 2),
       height: 5.h,
+      padding: EdgeInsets.symmetric(horizontal: 3.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5.sp),
         color: color,

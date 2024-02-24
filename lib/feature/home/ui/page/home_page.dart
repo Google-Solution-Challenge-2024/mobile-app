@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:solution_app/core/config/custom_theme_extension.dart';
-import 'package:solution_app/feature/home/ui/widget/general_child_development_tests_widget.dart';
+import 'package:solution_app/feature/home/ui/widget/test_list_widget.dart';
 import 'package:solution_app/feature/home/ui/widget/progress_widget.dart';
+import 'package:solution_app/feature/test/model/test_model.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,9 +20,22 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(),
+              const Row(),
               ProgressWidget(),
-              GeneralChildDevelopmentTests(),
+              SizedBox(height: 20.h),
+              TestListWidget(
+                title: 'General child development tests',
+                max: 6,
+                current: 3,
+                tests: generalTestsList,
+              ),
+              SizedBox(height: 20.h),
+              TestListWidget(
+                title: 'Special tests',
+                max: 6,
+                current: 3,
+                tests: specialTestList,
+              ),
             ],
           ),
         ),
